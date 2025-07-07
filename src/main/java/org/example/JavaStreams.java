@@ -48,7 +48,7 @@ public class JavaStreams {
     }
 
     public static void filterOddNumbers(List<Integer> listOfNumbers){
-        Predicate<Integer> isOdd = n -> n % 2 == 0;
+        Predicate<Integer> isOdd = n -> n % 2 != 0;
         System.out.println("Odd numbers: " + listOfNumbers.stream().filter(isOdd).toList());
     }
 
@@ -58,7 +58,6 @@ public class JavaStreams {
     }
 
     public static void squareNumbers(List<Integer> listOfInt){
-
         System.out.print("Squared Numbers: " + listOfInt.stream(). map(n -> n * n).toList().toString());
     }
 
